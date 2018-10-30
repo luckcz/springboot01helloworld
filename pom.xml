@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.kaicom</groupId>
+  <artifactId>springboot01helloworld</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <description>啊啊啊</description>
+	<parent>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-parent</artifactId>
+	<version>1.5.9.RELEASE</version>
+	</parent>
+	<!-- 这个父项目是这个，他是真正管理springboot应用里面的所有依赖版本
+  	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-dependencies</artifactId>
+		<version>1.5.9.RELEASE</version>
+		<relativePath>../../spring-boot-dependencies</relativePath>
+	</parent> 
+	-->
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<!-- spring-boot-starter:spring-boot场景启动器；帮我们导入了web模块正常运行所依赖的组件
+				spring-boot将所有的功能场景都取出来，做成一个个的starters(启动器)，只需要在项目里面引入这些starter相关场景的所有依赖都会导入进来，要用什么功能就导入什么场景的启动器
+			-->
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+	</dependencies>
+	<build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
